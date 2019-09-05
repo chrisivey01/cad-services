@@ -58,4 +58,9 @@ public class PoliceController {
             boloRepository.deleteBoloById(bolosForDelete.get(i).getId());
         }
     }
+
+    @PostMapping("/jail-data")
+    public CadSystem createJail(@RequestBody CadSystem cadData){
+        return policeRepository.save(cadData);
+    }
 }

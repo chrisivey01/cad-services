@@ -1,9 +1,6 @@
 package com.chris.hydralgtacad.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -21,7 +18,8 @@ public class CadSystem {
     String arrestingOfficer;
 
     @Column(name="time_stamp")
-    Date timeStamp;
+    @Temporal(TemporalType.TIMESTAMP)
+    Date timeStamp = new Date();
 
 
     public CadSystem(){}

@@ -19,7 +19,6 @@ public class PoliceController {
     private BoloRepository boloRepository;
 
 
-
     @Autowired
     public PoliceController(PoliceRepository policeRepository, BoloRepository boloRepository){
         this.policeRepository = policeRepository;
